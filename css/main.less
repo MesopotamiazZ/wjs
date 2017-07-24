@@ -1,0 +1,435 @@
+/*
+*公共字体样式
+*/
+@font-face{
+	font-family: "zttb";
+	src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'), url('../fonts/MiFie-Web-Font.svg') format('svg'), url('../fonts/MiFie-Web-Font.ttf') format('truetype'), url('../fonts/MiFie-Web-Font.woff') format('woff');
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: zttb;
+  font-style: normal;
+}
+
+.icon-mobilephone::before {
+  content: "\e908";
+  font-size: 13px;
+}
+
+.icon-telephone::before {
+  content: "\e909";
+  font-size: 15px;
+}
+
+.icon-logo::before {
+  content: "\e93e";
+}
+
+.icon-icon::before {
+  content: "\e920";
+}
+
+.icon-uniE907:before {
+  content: "\e907";
+}
+
+.icon-uniE906:before {
+  content: "\e906";
+}
+
+.icon-uniE905:before {
+  content: "\e905";
+}
+/*字体图标引入结束，除了轮播基本都使用的是字体图标*/
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+	margin: 0;
+	padding: 0;
+	p{
+		padding: 0;
+		margin: 0;
+	}
+	#header{
+		// height: 200px;
+		// background: #f0f0f0;
+		.topbar{
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #c0c0c0;
+			.container{
+				height: 40px;
+				.row{
+					height: 40px;
+					div{
+						height: 40px;
+						color: #c0c0c0;
+						a{
+							text-decoration: none;
+						}
+					}
+					div:nth-of-type(1){
+						a{
+							color: #c0c0c0;
+						}
+						img{
+							display: none;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-left: -60px;
+							margin-top: 20px;
+							z-index: 1001;
+						}
+					}
+					div:nth-of-type(1):hover{
+						a{
+							text-decoration: none;
+						}
+						img{
+							display: block;
+						}
+					}
+					div + div{
+						border-left: 1px solid #c0c0c0;
+					}
+				}
+			}
+		}
+		nav{
+			margin-bottom: 0;
+			height: 53px;
+			.container{
+				.navbar-header{
+					a{
+						i:nth-of-type(1){
+							font-size: 40px;
+							color: red;
+						}
+						i:nth-of-type(2){
+							font-size: 40px;
+
+						}
+					}
+				}
+				ul{
+					li:hover{
+						border-bottom: 2px solid red;
+					}
+				}
+			}
+		}
+	}
+	// section{
+	// 	height: 200px;
+	// 	background: #fff;
+	// }
+	// section:nth-of-type(2n+1){
+	// 	background: #f5f5f5;
+	// }
+	section:nth-of-type(1){
+		.carousel-inner{
+			.item{
+				// height: 410px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+			}
+			.item{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	section:nth-of-type(2){
+		margin-top: 50px;
+		border-bottom: 1px solid #c0c0c0;
+		.container{
+			.row > div{
+				margin-bottom: 20px;
+				a{
+					text-decoration: none;
+					color: #777;
+					.icon-uniE907{
+						font-size: 32px;
+					}
+				}
+				a:hover{
+					color: red;
+				}
+			}
+		}
+	}
+	section:nth-of-type(3){
+		line-height: 50px;
+		border-bottom: 1px solid #c0c0c0;
+	}
+
+	#products{
+		background: #f0f0f0;
+		.container{
+			.nav-tabs{
+				height: 42px;
+				background: transparent;
+				// overflow-x: scroll;
+			}
+			a{
+				color: #7d7d7d;
+			}
+			.active > a{
+				background: transparent;
+				border: none;
+				border-bottom: 2px solid red;
+
+			}
+			a:hover{
+				
+			}
+			.tab-content{
+				#tab_01{
+					.row{
+						.col-xs-12{
+							padding: 10px 10px;
+							margin: 0;
+							margin-top: 15px;
+							// width: 350px;
+							.panel-newdefault{
+
+								.panel-heading{
+
+								}
+								.panel-body{
+
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#footer{
+
+	}
+	
+}
+
+/*轮播媒体查询*/
+@media (min-width:768px) {
+	//当屏幕大于768时才固定item的高度410px
+	section:nth-of-type(1){
+		.carousel-inner{
+			.item{
+				height: 410px;
+			}
+		}
+	}
+}
+
+
+/*修改的bootstrap的nav-default的css样式*/
+.navbar-newdefault {
+  background-color: #fff;
+  border-color: #e7e7e7;
+  width: 100%;
+  top: 0;
+}
+.navbar-newdefault .navbar-brand {
+  color: #777;
+}
+.navbar-newdefault .navbar-brand:hover,
+.navbar-newdefault .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-newdefault .navbar-text {
+  color: #777;
+}
+.navbar-newdefault .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-newdefault .navbar-nav > li > a:hover,
+.navbar-newdefault .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+.navbar-newdefault .navbar-nav > .active > a,
+.navbar-newdefault .navbar-nav > .active > a:hover,
+.navbar-newdefault .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.navbar-newdefault .navbar-nav > .disabled > a,
+.navbar-newdefault .navbar-nav > .disabled > a:hover,
+.navbar-newdefault .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-newdefault .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-newdefault .navbar-toggle:hover,
+.navbar-newdefault .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-newdefault .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-newdefault .navbar-collapse,
+.navbar-newdefault .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-newdefault .navbar-nav > .open > a,
+.navbar-newdefault .navbar-nav > .open > a:hover,
+.navbar-newdefault .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-newdefault .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-newdefault .navbar-link {
+  color: #777;
+}
+.navbar-newdefault .navbar-link:hover {
+  color: #333;
+}
+.navbar-newdefault .btn-link {
+  color: #777;
+}
+.navbar-newdefault .btn-link:hover,
+.navbar-newdefault .btn-link:focus {
+  color: #333;
+}
+.navbar-newdefault .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-newdefault .btn-link:hover,
+.navbar-newdefault .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-newdefault .btn-link:focus {
+  color: #ccc;
+}
+
+/*修改panel-default的bootstrap样式*/
+.panel-newdefault {
+  margin: 0;
+  padding: 0;
+  // background: #e0e0e0;
+  border-radius: 0;
+  height: 150px;
+  box-shadow: 1px 2px 5px #c0c0c0;
+}
+.panel-newdefault.actived{
+	background: red;
+}
+.panel-newdefault.actived::before{
+	content: '\e915';
+	font-family: zttb;
+	font-size: 40px;
+	position: absolute;
+	top: 2px;
+}
+.panel-newdefault.disabled{
+	background: #e0e0e0;
+}
+.panel-newdefault > .panel-heading {
+  color: #333;
+  background-color: transparent;
+  padding: 0;
+  float: right;
+  border: 0;
+  width: 120px;
+  height: 150px;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  line-height: 130px;
+  font-size: 20px;
+  // color: white;
+}
+.panel-newdefault > .panel-heading::before {
+	content: ' ';
+	width: 20px;
+	height: 20px;
+	background: #f0f0f0;
+	border-radius: 10px;
+	position: absolute;
+	top: -8px;
+	left: -10px;
+}
+.panel-newdefault > .panel-heading::after {
+	content: ' ';
+	width: 20px;
+	height: 20px;
+	background: #f0f0f0;
+	border-radius: 10px;
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	box-shadow: 0px 3px 1px #c0c0c0 inset;
+}
+.panel-newdefault > .panel-body {
+  color: #333;
+  background-color: transparent;
+  padding: 0;
+  // float: left;
+  border: 0;
+  margin-right: 120px;
+  height: 150px;
+  border-right: 1px dashed #a0a0a0;
+  padding: 10px;
+}
+.panel-newdefault > .panel-heading + .panel-collapse > .panel-body {
+  border: 0;
+}
+
+.panel-newdefault > .panel-heading > .tooltips{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.panel-newdefault > .panel-heading > .tooltips > .badge-one{
+  // width: 25px;
+  // height: 25px;
+  padding: 2px;
+  border: 1px solid blue;
+  border-radius: 2px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.panel-newdefault > .panel-heading > .tooltips > .badge-two{
+  // width: 25px;
+  // height: 25px;
+  padding: 2px;
+  border: 1px solid green;
+  border-radius: 2px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
